@@ -1,0 +1,72 @@
+.mobile-home {
+    color: #fff;
+    height: 100vh;
+}
+
+.mobile-header {
+    width: 85%;
+    margin: auto;
+    padding: 15px;
+    font-size: 1rem;
+    color: #ffd001;
+    font-weight: 700;
+}
+
+.mobile-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 200px auto;
+}
+
+.mobile-body a {
+    text-decoration: none;
+}
+
+.mobile-body .mobile-solana:hover {
+    color: white;
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.mobile-solana {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 8px;
+    background-color: #96007f;
+    color: #fcfcfc;
+    margin-bottom: 1rem;
+    box-shadow: 0 0rem 0.5rem 0 #cec7c7;
+}
+
+.mobile-eth {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 8px;
+    background-color: #fcfcfc;
+    color: #96007f;
+    margin-bottom: 1rem;
+}
+.mobile-body .mobile-eth:hover{
+    color: #49003e;
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.mobile-icons svg {
+    margin-right: 8px;
+}
+
+
+
+@media screen and (min-width:700px) {
+    .mobile-home {
+        display: none;
+    }
+}
