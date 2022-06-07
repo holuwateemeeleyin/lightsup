@@ -1,0 +1,31 @@
+.header_container{
+    /* padding-top: 2rem; */
+}
+
+.header-logo{
+    text-decoration: none;
+    color: #ffd001 !important;
+    font-weight: bolder;
+    font-size: 1.3rem;
+    font-family: 'Courier New', Courier, monospace;    
+}
+
+.header-nav{
+    font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #ffd001 !important;
+    font-weight: bold;
+}
+
+
+.header-nav:hover {
+    border: 2px solid lightcoral;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.toggle-switch{
+    margin-top: -6px;
+}
