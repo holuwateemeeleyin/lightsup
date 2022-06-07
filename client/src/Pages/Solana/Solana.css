@@ -1,0 +1,252 @@
+.solana-parent-container{
+    background-color:#282c34;
+    height: 100vh;
+}
+
+.solana{
+    width:85%;
+    margin: auto;
+    color: #fff !important;
+}
+
+.solana-header{
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* .listNFT_container-parent {
+    margin: auto;
+    width: 85%;
+}
+
+.listNFT_container{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.listNFT_header{
+    margin-bottom: 1rem;
+    font-family: 'Helvetica';
+    color: aliceblue;
+    font-size: 1.9rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+.card-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card {
+    background-color: #282c34 !important;
+    width: 14rem;
+    min-height: 20rem;
+    border: 2px solid #f2f2f2 !important;
+    margin-left: 3rem;
+    border-radius: 1rem !important;
+    margin-bottom: 3rem;
+    box-shadow: 0 0.2rem 0.7rem 0 #cec7c7;
+}
+.card img{
+    border-radius: 1rem;
+}
+
+
+.card_project-header{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.card-price-supply{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 0.55rem;
+    font-weight: bold;
+}
+
+.card-price {
+    border: 2px solid;
+    border-radius: 7px;
+    background-color: palevioletred;
+    border-color: transparent;
+    padding: 3px;
+    margin-right: 1.3rem;
+}
+
+.card-supply {
+    border: 2px solid;
+    border-radius: 7px;
+    padding: 3px;
+    background-color: palevioletred;
+    border-color: transparent;
+}
+
+.drop-date{
+    display: flex;
+    justify-content: center;
+    font-size:0.8rem;
+    font-weight: bold;
+    padding: 8px;
+}
+.social-links{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.discord{
+    border: 2px solid;
+    border-radius: 8px;
+}
+
+.discord-link {
+    display: flex;
+    color: #fbfbfb;
+}
+.discord-text{
+    padding-top: 0.5rem;
+    padding-right: 1rem;
+}
+
+.twitter{
+    border: 2px solid;
+    border-radius: 8px;
+}
+a {
+    text-decoration: none !important;
+}
+
+.twitter-link{
+    display: flex;
+    color: #fbfbfb;
+}
+
+.twitter-text{
+    padding-top: 0.5rem;
+    padding-right: 1rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+table {
+    border-collapse: collapse;
+    border: 2px solid;
+    width: 100%;
+  }
+
+  thead{
+    background-color: palevioletred;
+    color: white;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tbody:nth-child(even) {
+    background-color: #f2f2f2;
+    color:#000000;
+  }
+  
+  .info{
+      margin: auto;
+      width: 30%;
+  }
+  .info img {
+      width: 20%;
+      border-radius: 10px;
+  }
+
+  .info-text {
+      position: absolute;
+      margin: 1.5rem;
+      font-weight: bold;
+  }
+
+  @media screen and (max-width:768px) {
+      
+
+    .card-container {
+        justify-content: none;
+    }
+    .card{
+        width: 6.43rem;
+        min-height: 10rem;
+        margin-left: 0.2rem;
+    }
+    .card img{
+        border-radius: 0.8rem;
+    }
+    
+    
+    .card_project-header{
+        font-size: 0.5rem;
+        padding: 0.5rem;
+    }
+    
+    .card-price-supply{
+        font-size: 0.4rem;
+    }
+    
+    .card-price {
+        margin-right: 0.2rem;
+        padding: 1px;
+    }
+    
+
+
+    .drop-date{
+        font-size: 0.42rem;
+        font-weight: normal;
+    }
+    .social-links{
+        margin-bottom: 1rem;
+    }
+    .chrome-link{
+        display: none;
+    }
+    .chrome-link a {
+        font-size: 0.5rem;
+    }
+    
+    .discord{
+        display: none;
+    }
+    
+    .discord-link {
+        display: none;
+    }
+    .discord-text{
+        display: none;
+    }
+    
+    .twitter{
+        display: none;
+    }
+    a {
+        text-decoration: none !important;
+    }
+    
+    .twitter-link{
+        display: none;
+    }
+    
+    .twitter-text{
+        display: none;
+    }
+} */
