@@ -18,7 +18,12 @@ export default function RoutesPath() {
       .catch((err) => console.error(err))
     setLoading(false)
   }, [])
-  
+
+
+  // const filteredCoins = coins.filter((coin) =>
+  //   coin.name.toLowerCase().includes(search.toLowerCase())
+  // );
+
   if (loading) {
     return <div className="loader-container">
       <div className='loader'>
@@ -37,7 +42,7 @@ export default function RoutesPath() {
   return (
     <Routes>
       <Route path='/' element={<Home />} />
-      <Route exact path='/solana' element={<Solana />} solana={solana} />
+      <Route exact path='/solana' element={<Solana solana={solana} /> } />
     </Routes>
   )
 }
