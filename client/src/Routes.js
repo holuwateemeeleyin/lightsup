@@ -4,6 +4,7 @@ import axios from 'axios'
 import Home from './Pages/Home'
 import Solana from './Pages/Solana'
 import './App.css'
+import Loader from './Pages/Loader'
 export default function RoutesPath() {
   const [loading, setLoading] = useState(true)
   const [solana, setSolana] = useState()
@@ -25,19 +26,7 @@ export default function RoutesPath() {
   // );
 
   if (loading) {
-    return <div className="loader-container">
-      <div className='loader'>
-        <span className="let1">l</span>
-        <span className="let2">i</span>
-        <span className="let3">g</span>
-        <span className="let4">h</span>
-        <span className="let5">t</span>
-        <span className="let4">s</span>
-        <span className="let2">_</span>
-        <span className="let6">U</span>
-        <span className="let7">P</span>
-      </div>
-    </div>
+    return <Loader/>
   }
   return (
     <Routes>
