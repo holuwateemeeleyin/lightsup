@@ -4,6 +4,7 @@ import moment from 'moment'
 import { FaChrome, FaDiscord } from 'react-icons/fa'
 import { BsTwitter } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
+import Loader from '../../Pages/Loader'
 export default function Card(props) {
   const { cards } = props
   // console.log(card);
@@ -35,7 +36,7 @@ export default function Card(props) {
             </div>
             : null
         ))
-          : null
+          : <Loader/>
       }
     </div>
   )
