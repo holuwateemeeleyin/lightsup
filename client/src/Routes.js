@@ -5,6 +5,8 @@ import Home from './Pages/Home'
 import Solana from './Pages/Solana'
 import './App.css'
 import Loader from './Pages/Loader'
+import SolanaForm from './Pages/Form/Solana'
+
 export default function RoutesPath() {
   const [loading, setLoading] = useState(true)
   const [solana, setSolana] = useState()
@@ -32,6 +34,7 @@ export default function RoutesPath() {
     <Routes>
       <Route path='/' element={<Home />} />
       <Route exact path='/solana' element={<Solana solana={solana} /> } />
+      <Route exact path='/add-solana' element={<SolanaForm/>} />
     </Routes>
   )
 }
