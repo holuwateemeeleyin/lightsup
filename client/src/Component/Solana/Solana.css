@@ -65,28 +65,34 @@
 
 /* Table */
 
-.info{
-    /* flex-wrap: wrap; */
-    margin: auto;
-    width: 30%;
-}
-.info img {
-    /* width: 50%; */
-    border-radius: 5px;
-}
 
-.info-text {
-    /* position: absolute; */
+/* .info-text {
+    position: fixed;
     margin: 1.5rem;
     font-weight: bold;
-}
+} */
+
+/* .info{
+    margin: auto;
+    width: 30%;
+} */
+/* .info img { */
+    /* width: 50%; */
+    /* border-radius: 5px; */
+/* } */
+
+/* .info-text { */
+    /* position: absolute; */
+    /* margin: 1.5rem; */
+    /* font-weight: bold; */
+/* } */
 
 .table {
     width: 100%;
     margin: 20px auto;
     border-collapse: collapse;
     /* table-layout: fixed; */
-  }
+}
 
 /* table {
     border-collapse: collapse;
