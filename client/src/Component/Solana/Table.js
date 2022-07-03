@@ -1,7 +1,10 @@
 import React from 'react'
 import Table from 'react-bootstrap/Table'
 import moment from 'moment'
+import { FaChrome, FaDiscord } from 'react-icons/fa'
+import { BsTwitter } from 'react-icons/bs'
 import './Solana.css'
+import { Link } from 'react-router-dom'
 export default function SolanaTable({table}) {
   console.log('table', table);
   return (
@@ -10,6 +13,7 @@ export default function SolanaTable({table}) {
         <thead>
           <tr>
             <th>Info</th>
+            <th> </th>
             <th>Price</th>
             <th>Count</th>
             <th>Drop</th>
@@ -20,22 +24,29 @@ export default function SolanaTable({table}) {
         {
             table ? 
             table.map(item => (
-              !item.promote ? 
-              <tbody key={item._id}>
+              !item.promote && (
+                <tbody key={item._id}>
                 <tr>
-                <td className='info'>
-                    {/* <div><img src={item.projectImage} alt='NFT'/></div> */}
-                    {/* <p className='info-text'> {item.name} </p> */}
+                  <td className='info'>
                     <img src={item.projectImage} alt='NFT'/>
                   </td>
-                  <td>{item.price}</td>
+                  <td>{item.name}</td>
+                  <td className='table-price'>{item.price}</td>
                   <td>{item.supply}</td>
                   <td> {moment(item.date).utc().format('MMMM Do YYYY, h:mm:ss')}</td>
-                  <td>Links</td>
+                  <td className='social-icons'>
+                  <Link to='#'><FaChrome color='palevioletred' fontSize={12}/></Link>
+                  <Link to='#' className='discord'>
+                    <FaDiscord color='palevioletred' fontSize={12}/>
+                  </Link>
+                  <Link to='#' className='twitter'>
+                    <BsTwitter color='palevioletred' />
+                  </Link>
+                  </td>
                   <td> Description </td>
                 </tr>
               </tbody>
-              : null
+              )
             ))
             : null
           }
