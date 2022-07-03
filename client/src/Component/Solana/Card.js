@@ -1,5 +1,5 @@
 import React from 'react'
-import './Solana.css'
+// import './Solana.css'
 import moment from 'moment'
 import { FaChrome, FaDiscord } from 'react-icons/fa'
 import { BsTwitter } from 'react-icons/bs'
@@ -10,10 +10,10 @@ export default function Card(props) {
   // console.log(card);
 
   return (
-    <div className='solana-card-container'>
+    <div className="solana-card-container">
       {
         cards ? cards.map(card => (
-          card.promote ?
+          card.promote  && (
             <div className='solana-card' key={card._id}>
               <img src={`/uploads/${card.projectImage}`} alt='...' width="100%" />
               <h6>{card.name} </h6>
@@ -34,7 +34,7 @@ export default function Card(props) {
                   </Link>
               </div>
             </div>
-            : null
+          )
         ))
           : <Loader/>
       }
