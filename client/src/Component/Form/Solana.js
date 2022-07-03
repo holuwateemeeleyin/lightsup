@@ -55,7 +55,7 @@ export default function Solana() {
     }
 
     return (
-        <form onSubmit={submitForm} encType="multipart/form-data">
+        <form onSubmit={submitForm} encType="multipart/form-data" autoComplete="off">
             <div className='form-group'>
                 <label>Project Name</label>
                 <input
