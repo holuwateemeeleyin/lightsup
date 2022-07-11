@@ -110,10 +110,21 @@ tr:hover {
     transition: 0.3s ease-in-out;
     cursor: pointer;
 }
-
+.table-icon {
+    display: flex;
+    height: 145px;
+}
+.table-icon svg {
+    margin-right: 0.5rem;
+}
 @media screen and (max-width:500px) {
     .table{
         width: 100%;
+    }
+
+    .table-icon {
+        display: flex;
+        height: 83px;
     }
     .solana-card{
         margin-left: 0;
