@@ -49,8 +49,6 @@
     padding: 0.6rem;
 }
 .social-icons {
-    display: flex;
-    justify-content: center;
     margin-bottom: 1rem;
     cursor: pointer;
 }
@@ -94,23 +92,26 @@
     /* table-layout: fixed; */
 }
 
-/* table {
-    border-collapse: collapse;
-    border: 2px solid;
-    width: 100%;
-  } */
-
-  thead{
+thead{
     background-color: palevioletred;
     color: white;
-  }
+}
 
-  th, td {
+th, td {
     text-align: left;
-    padding: 8px;
-  }
+    padding: 8px;  
+}
 
-  @media screen and (max-width:500px) {
+td img { 
+    width: 8rem;
+}
+tr:hover {
+    transform: scale(1.01);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+@media screen and (max-width:500px) {
     .table{
         width: 100%;
     }
@@ -127,4 +128,4 @@
 
     }
 
-  }
+}
