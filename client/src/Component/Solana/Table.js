@@ -34,7 +34,7 @@ export default function SolanaTable({table}) {
                   <td className='table-price'>{item.price}</td>
                   <td>{item.supply}</td>
                   <td> {moment(item.date).utc().format('MMMM Do YYYY, h:mm:ss')}</td>
-                  <td className='social-icons'>
+                  <td className='table-icon'>
                   <Link to='#'><FaChrome color='palevioletred' fontSize={22}/></Link>
                   <Link to='#' className='discord'>
                     <FaDiscord color='palevioletred' fontSize={22}/>
