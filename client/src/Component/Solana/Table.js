@@ -35,12 +35,12 @@ export default function SolanaTable({table}) {
                   <td>{item.supply}</td>
                   <td> {moment(item.date).utc().format('MMMM Do YYYY, h:mm:ss')}</td>
                   <td className='social-icons'>
-                  <Link to='#'><FaChrome color='palevioletred' fontSize={12}/></Link>
+                  <Link to='#'><FaChrome color='palevioletred' fontSize={22}/></Link>
                   <Link to='#' className='discord'>
-                    <FaDiscord color='palevioletred' fontSize={12}/>
+                    <FaDiscord color='palevioletred' fontSize={22}/>
                   </Link>
                   <Link to='#' className='twitter'>
-                    <BsTwitter color='palevioletred' />
+                    <BsTwitter color='palevioletred' fontSize={22} />
                   </Link>
                   </td>
                   <td> Description </td>
