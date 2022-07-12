@@ -4,7 +4,7 @@ import Table from '../../Component/Solana/Table'
 import SolanaHeader from '../Header/Solana/SolanaHeader'
 import './Solana.css'
 
-export default function Solana({solana}) {
+export default function Solana({solana, filtered, search, handleSearch}) {
   return (
     <div className='solana-parent-container'>
       <SolanaHeader/>
@@ -16,7 +16,16 @@ export default function Solana({solana}) {
         <div className='solana-table-header'>
           Upcomming Projects
         </div>
-        <Table table={solana}/>
+        <div className='search'>
+          <input
+            type='text'
+            placeholder='Search...'
+            value={search}
+            onChange={handleSearch}
+            className='search-input'
+          />
+        </div>
+        <Table table={filtered}/>
       </div>
     </div>
   )
