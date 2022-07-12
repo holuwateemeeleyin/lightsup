@@ -2,7 +2,7 @@ import React from 'react'
 import EthHeader from '../Header/Eth/EthHeader'
 import Card from '../../Component/Eth/Card'
 import Table from '../../Component/Eth/Table'
-export default function Eth({eth}) {
+export default function Eth({eth, filtered, search, handleSearch}) {
 
   return (
     <div className='solana-parent-container'>
@@ -15,7 +15,16 @@ export default function Eth({eth}) {
         <div className='solana-table-header'>
           Upcomming Projects
         </div>
-        <Table table={eth}/>
+        <div className='search'>
+          <input
+            type="text"
+            placeholder='Search...'
+            value={search}
+            onChange={handleSearch}
+            className='search-input'
+          />
+        </div>
+        <Table table={filtered}/>
       </div>
     </div>
   )
