@@ -8,12 +8,13 @@ import './App.css'
 import Loader from './Pages/Loader'
 import SolanaForm from './Pages/Form/Solana'
 import EthForm from './Pages/Form/Eth'
-import Login from './Pages/Admin'
+// import Login from './Pages/Admin'
 
 export default function RoutesPath() {
   const [loading, setLoading] = useState(true)
-  const [solana, setSolana] = useState()
-  const [eth, setEth] = useState()
+  const [solana, setSolana] = useState([])
+  const [eth, setEth] = useState([])
+  const [search, setSearch] = useState('')
 
   useEffect(() => {
     setLoading(true)
@@ -36,10 +37,17 @@ export default function RoutesPath() {
       setLoading(false)
   }, [])
 
+  const handleSearchInput =(e)=> {
+    setSearch(e.target.value)
+  }
 
-  // const filteredCoins = coins.filter((coin) =>
-  //   coin.name.toLowerCase().includes(search.toLowerCase())
-  // );
+  const filteredSolana = solana.filter((sol) =>
+    sol.name.toLowerCase().includes(search.toLowerCase())
+  );
+
+  const filteredEth = eth.filter((et)=> (
+    et.name.toLowerCase().includes(search.toLowerCase())
+  ))
 
   if (loading) {
     return <Loader/>
@@ -47,11 +55,21 @@ export default function RoutesPath() {
   return (
     <Routes>
       <Route path='/' element={<Home />} />
-      <Route exact path='/solana' element={<Solana solana={solana} /> } />
-      <Route exact path='/eth' element={<Eth eth={eth} /> } />
+      <Route exact path='/solana' element={<Solana 
+        solana={solana} 
+        filtered={filteredSolana}
+        search={search}
+        handleSearch={handleSearchInput}
+      /> } />
+      <Route exact path='/eth' element={<Eth 
+        eth={eth}
+        filtered={filteredEth}
+        search={search}
+        handleSearch={handleSearchInput}
+      /> } />
       <Route exact path='/add-solana' element={<SolanaForm/>} />
       <Route exact path='/add-eth' element={<EthForm/>} />
-      <Route exact path='/login' element={<Login/>}/>
+      {/* <Route exact path='/login' element={<Login/>}/> */}
     </Routes>
   )
 }
