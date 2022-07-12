@@ -7,11 +7,13 @@ import Eth from './Pages/Eth'
 import './App.css'
 import Loader from './Pages/Loader'
 import SolanaForm from './Pages/Form/Solana'
+import EthForm from './Pages/Form/Eth'
 import Login from './Pages/Admin'
 
 export default function RoutesPath() {
   const [loading, setLoading] = useState(true)
   const [solana, setSolana] = useState()
+  const [eth, setEth] = useState()
 
   useEffect(() => {
     setLoading(true)
@@ -22,6 +24,16 @@ export default function RoutesPath() {
       })
       .catch((err) => console.error(err))
     setLoading(false)
+  }, [])
+
+  useEffect(()=>{
+    setLoading(true)
+    axios.get(`/api/get-ethNFTs`)
+      .then((res)=> {
+        setEth(res.data)
+      })
+      .catch((err)=> console.error(err))
+      setLoading(false)
   }, [])
 
 
@@ -36,8 +48,9 @@ export default function RoutesPath() {
     <Routes>
       <Route path='/' element={<Home />} />
       <Route exact path='/solana' element={<Solana solana={solana} /> } />
-      <Route exact path='/eth' element={<Eth /> } />
+      <Route exact path='/eth' element={<Eth eth={eth} /> } />
       <Route exact path='/add-solana' element={<SolanaForm/>} />
+      <Route exact path='/add-eth' element={<EthForm/>} />
       <Route exact path='/login' element={<Login/>}/>
     </Routes>
   )
