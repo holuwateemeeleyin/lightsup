@@ -19,6 +19,7 @@ router.post('/add-ethproject', upload.single('ethImage'), async (req, res) =>{
             website: req.body.website,
             discord:req.body.discord,
             twitter:req.body.twitter,
+            description:req.body.description,
             ethImage: result.secure_url,
             cloudinary_id: result.public_id,
             promote:req.body.promote
