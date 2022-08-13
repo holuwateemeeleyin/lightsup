@@ -11,6 +11,7 @@ export default function Solana() {
     const [website, setWebsite] = useState('')
     const [discord, setDiscord] = useState('')
     const [twitter, setTwitter] = useState('')
+    const [description, setDescription] = useState('')
     const [promote, setPromote] = useState(false)
     const [startDate, setStartDate] = useState();
     const [fileName, setFileName] = useState('')
@@ -32,6 +33,7 @@ export default function Solana() {
         formData.append("website", website)
         formData.append("discord", discord)
         formData.append("twitter", twitter)
+        formData.append("description", description)
         formData.append("promote", promote)
         formData.append("date", startDate)
         formData.append("projectImage", fileName)
@@ -42,6 +44,7 @@ export default function Solana() {
         setWebsite('')
         setDiscord('')
         setTwitter('')
+        setDescription('')
         setPromote('')
         setStartDate('')
         setFileName('')
@@ -123,6 +126,17 @@ export default function Solana() {
                     placeholder='Twitter...'
                     value={twitter}
                     onChange={(e) => setTwitter(e.target.value)}
+                />
+            </div>
+
+            <div className='form-group'>
+                <label>Description</label>
+                <textarea
+                    className="form-control"
+                    name='description'
+                    placeholder='Type...'
+                    value={description}
+                    onChange={(e) => setDescription(e.target.value)}
                 />
             </div>
 

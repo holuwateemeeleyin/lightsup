@@ -10,6 +10,7 @@ export default function Eth() {
     const [website, setWebsite] = useState('')
     const [discord, setDiscord] = useState('')
     const [twitter, setTwitter] = useState('')
+    const [description, setDescription] = useState('')
     const [promote, setPromote] = useState(false)
     const [startDate, setStartDate] = useState();
     const [fileName, setFileName] = useState()
@@ -30,6 +31,7 @@ export default function Eth() {
         formData.append("website", website)
         formData.append("discord", discord)
         formData.append("twitter", twitter)
+        formData.append("description", description)
         formData.append("promote", promote)
         formData.append("date", startDate)
         formData.append("ethImage", fileName)
@@ -40,6 +42,7 @@ export default function Eth() {
         setWebsite('')
         setDiscord('')
         setTwitter('')
+        setDescription('')
         setPromote('')
         setStartDate('')
         setFileName()
@@ -116,12 +119,21 @@ export default function Eth() {
                     type="text"
                     className="form-control"
                     name='twitter'
-                    placeholder='Twitter...'
+                    placeholder='Twitter link...'
                     value={twitter}
                     onChange={(e) => setTwitter(e.target.value)}
                 />
             </div>
-
+            <div className='form-group'>
+                <label>Description</label>
+                <textarea
+                    className="form-control"
+                    name='description'
+                    placeholder='Type...'
+                    value={description}
+                    onChange={(e) => setDescription(e.target.value)}
+                />
+            </div>
             <div className='form-group'>
                 <label>Date</label>
                 <DatePicker
