@@ -27,6 +27,9 @@ const EthSchema = new mongoose.Schema ({
     ethImage:{
         type: String
     },
+    description:{
+        type: String
+    },
     cloudinary_id :{
         type:String
     },

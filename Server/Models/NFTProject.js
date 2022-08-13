@@ -24,6 +24,9 @@ const NFTProjectSchema = new mongoose.Schema ({
     twitter:{
         type:String
     },
+    description:{
+        type: String
+    },
     projectImage:{
         type: String
     },
