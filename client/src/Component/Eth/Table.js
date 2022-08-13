@@ -28,20 +28,18 @@ export default function EthTable({table}) {
                   <td className='info'>
                     <img src={item.ethImage} alt='NFT'/>
                   </td>
-                  <td>{item.name}</td>
-                  <td className='table-price'>{item.price}</td>
-                  <td>{item.supply}</td>
-                  <td> {moment(item.date).utc().format('MMMM Do YYYY, h:mm:ss')}</td>
+                  <td valign='middle'>{item.name}</td>
+                  <td className='table-price' valign='middle'>{item.price}</td>
+                  <td valign='middle'>{item.supply}</td>
+                  <td valign='middle'> {moment(item.date).utc().format('MMMM Do YYYY, h:mm:ss')}</td>
                   <td className='table-icon'>
-                  <Link to='#'><FaChrome color='palevioletred' fontSize={22}/></Link>
+                  <Link to='#'><FaChrome color='#fff' fontSize={15}/></Link>
                   <Link to='#' className='discord'>
-                    <FaDiscord color='palevioletred' fontSize={22}/>
+                    <FaDiscord color='#fff' fontSize={15}/>
                   </Link>
-                  <Link to='#' className='twitter'>
-                    <BsTwitter color='palevioletred' fontSize={22} />
-                  </Link>
+                  <a target="_blank" href={item.twitter}><BsTwitter size={15} color='#fff'/></a>
                   </td>
-                  <td> Description </td>
+                  <td valign='middle'> {item.description} </td>
                 </tr>
               </tbody>
               )
