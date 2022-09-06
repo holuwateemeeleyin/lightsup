@@ -141,10 +141,10 @@ transition: 0.5s;
   padding: 0 1.5em;
 }
 
-@media screen and (max-width: 700px) {
-    .desktop-view {
-        display: none;
-    }
+/* @media screen and (max-width: 700px) { */
+    /* .desktop-view { */
+        /* display: none; */
+    /* } */
     /* .eth_container-parent{
         background-color: initial;
     }
@@ -152,4 +152,4 @@ transition: 0.5s;
         display: none;
     } */
 
-}
+/* } */
