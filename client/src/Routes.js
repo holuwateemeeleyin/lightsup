@@ -9,6 +9,7 @@ import Loader from './Pages/Loader'
 import SolanaForm from './Pages/Form/Solana'
 import EthForm from './Pages/Form/Eth'
 // import Login from './Pages/Admin'
+import AdminHome from './Pages/Admin/Home'
 
 export default function RoutesPath() {
   const [loading, setLoading] = useState(true)
@@ -49,6 +50,31 @@ export default function RoutesPath() {
     et.name.toLowerCase().includes(search.toLowerCase())
   ))
 
+  // const deleteSolana = (id)=> {
+  //   axios.delete(`/api/delete-nft`, id)
+  //   .then(response =>
+  //     setSolana([
+  //       ...solana.filter((sol)=>{
+  //         return sol._id !== id
+  //       })
+  //     ])
+  //     )
+  // }
+  const deleteSolana = (id) => {
+    axios.delete(`/api/delete-nft/${id}`)
+    .then(res => {
+      alert(res.data.status)
+    })
+  }
+//   deleteTodoItem = (id) => {
+//     this.setState(prevState => ({
+//         todos: prevState.todos.filter((todo) => {
+//             return todo.id !== id
+//         })
+//     }))
+//     // console.log('deleted', id);
+// }
+
   if (loading) {
     return <Loader/>
   }
@@ -70,6 +96,10 @@ export default function RoutesPath() {
       <Route exact path='/add-solana' element={<SolanaForm/>} />
       <Route exact path='/add-eth' element={<EthForm/>} />
       {/* <Route exact path='/login' element={<Login/>}/> */}
+      <Route exact path='/admin' element={<AdminHome
+        solana={solana}
+        deleteSol={deleteSolana}
+      />}/>
     </Routes>
   )
 }

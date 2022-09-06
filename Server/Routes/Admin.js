@@ -2,11 +2,11 @@ const express = require('express')
 
 const router = express.Router()
 
-const { Admin } = require('../Models/Admin')
-const { Auth } = require('../Middleware/Auth')
+const {Admin} = require('../Models/Admin')
+const { auth } = require('../Middleware/auth')
 
 // POST for Registering Admin
-router.post ('/register', (req,res)=> {
+router.post('/register', (req,res)=> {
     const admin = new Admin(req.body)
     admin.save((err, doc)=> {
         if(err) return res.status(400).send(err)

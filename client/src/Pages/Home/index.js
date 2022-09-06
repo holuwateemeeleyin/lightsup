@@ -9,7 +9,7 @@ export default function Home() {
     return (
         <div className='home_container-parent'>
             <HomeMobile/>
-            <div className='desktop-view'>
+            {/* <div className='desktop-view'>
             <div className='home_container'>
                 <div className='solana-container-parent'>
                     <div className="solana-container">
@@ -37,7 +37,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            </div>
+            </div> */}
         </div>
     )
 }

@@ -25,9 +25,12 @@ mongoose.connect(
 
 const nftProject = require('./Routes/NFTProject')
 const ethProject = require('./Routes/Eth')
+const admin = require('./Routes/Admin')
+
 app.use(cookieParser())
 app.use('/api', nftProject)
 app.use('/api', ethProject)
+app.use('/api', admin)
 
 
 // if (process.env.NODE_ENV === "production") {
