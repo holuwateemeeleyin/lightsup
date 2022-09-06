@@ -1,3 +1,8 @@
+const path = require('path')
+const dotenv =require ('dotenv')
+dotenv.config({path: path.resolve(__dirname, './.env')})
+
+
 const mongoose = require('mongoose')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
@@ -10,7 +15,7 @@ const AdminSchema = mongoose.Schema({
         unique:1,
         trim:true
     },
-    adminID:{
+    adminId:{
         type: String,
         required:true
     },
@@ -96,5 +101,5 @@ AdminSchema.methods.deleteToken = function(token,cb){
 }
 
 
-const Admin = mongoose.model('admins', AdminSchema)
-module.exports = Admin
+const Admin = mongoose.model('Admin', AdminSchema)
+module.exports = {Admin}
