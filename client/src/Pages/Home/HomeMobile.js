@@ -23,9 +23,9 @@ export default function HomeMobile() {
 
                 <Slide left cascade>
                     <div className='mobile-icons'>
-                        <SiFacebook size={25} />
-                        <SiTwitter size={25} />
-                        <SiInstagram size={25} />
+                        <SiFacebook size={25} color='#fff'/>
+                        <a target="_blank" href="https://twitter.com/LightsupNFT"><SiTwitter size={25} color='#fff'/></a>
+                        <SiInstagram size={25} color='#fff'/>
                     </div>
                 </Slide>
             </div>
