@@ -15,7 +15,7 @@ export default function Card(props) {
         cards ? cards.map(card => (
           card.promote  && (
             <div className='solana-card' key={card._id}>
-              <img src={`/uploads/${card.projectImage}`} alt='...' width="100%" />
+              <img src={card.projectImage} alt={card.name} width="100%" />
               <h6>{card.name} </h6>
               <div className='price-supply'>
                 <div className='price'>Price- {card.price} </div>
