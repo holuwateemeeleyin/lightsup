@@ -1,18 +1,68 @@
 import React from 'react'
-import Card from '../../Component/Solana/Card'
-import Table from '../../Component/Solana/Table'
+import Card from '../../Component/Card/Card'
 import SolanaHeader from '../Header/Solana/SolanaHeader'
 import './Solana.css'
+import Slider from "react-slick";
+import NFTTable from '../../Component/NFTTable';
 
-export default function Solana({solana, filtered, search, handleSearch}) {
+export default function Solana({ solana, filtered, search, handleSearch }) {
+
+  const settings = {
+    arrows: false,
+    dots: false,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
   return (
     <div className='solana-parent-container'>
-      <SolanaHeader/>
+      <SolanaHeader />
       <div className='solana'>
         <div className='solana-header'>
           Solana Trending NFT
         </div>
-        <Card cards={solana}/>
+        <div className='card-container sticky'>
+          <Slider {...settings}>
+            {
+              solana ? solana.map((sol) => (
+                sol.promote && (
+                  <Card card={sol} key={sol._id} />
+                )
+              )) : 'Card loading....'
+            }
+          </Slider>
+
+        </div>
         <div className='solana-table-header'>
           Upcomming Projects
         </div>
@@ -25,7 +75,7 @@ export default function Solana({solana, filtered, search, handleSearch}) {
             className='search-input'
           />
         </div>
-        <Table table={filtered}/>
+        <NFTTable table={filtered}/>
       </div>
     </div>
   )
