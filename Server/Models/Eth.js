@@ -24,7 +24,7 @@ const EthSchema = new mongoose.Schema ({
     twitter:{
         type:String
     },
-    ethImage:{
+    image:{
         type: String
     },
     description:{
