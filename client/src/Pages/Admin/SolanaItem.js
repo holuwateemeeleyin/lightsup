@@ -10,7 +10,7 @@ export default function SolanaItem({ sol, deleteButton }) {
                 </button>
             </td>
             <td className='info'>
-                <img src={sol.projectImage} alt='NFT' />
+                <img src={sol.image} alt='NFT' />
             </td>
             <td>{sol.name}</td>
             <td className='table-price'>{sol.price}</td>
