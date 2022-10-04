@@ -1,0 +1,160 @@
+.nft-card {
+    min-height: 5rem;
+    border: 2px solid #fff;
+    width: 95% !important;
+    box-shadow: 0 0.1rem 0.2rem 0 #cec7c7;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.nft-card img {
+    border-radius: 1rem;
+}
+.nft-card h6 {
+    font-size:0.6rem;
+    font-weight: 700;
+    padding: 0.3rem 0 0.1rem 0;
+}
+
+.price-supply {
+    display: flex;
+    justify-content: center;
+    font-size: 0.45rem;
+    font-weight: bold;
+}
+
+.price {
+    margin-right: 0.7rem;
+    background-color: #e78b00;
+    border-radius: 6px;
+    padding: 4px;
+}
+
+.supply {
+    background-color: #e78b00;
+    border-radius: 6px;
+    padding: 4px;
+}
+
+.date {
+    font-size: 0.45rem;
+    font-weight: bold;
+    padding: 0.6rem;
+    color: #ffb74a;
+}
+
+
+.social-icons {
+    margin-top: -0.7rem;
+    margin-bottom: 0.2rem;
+    cursor: pointer;
+}
+
+.social-icons svg {
+    font-size: 12px;
+    margin-right: 0.5rem;
+}
+
+.nft-card:hover {
+    cursor: pointer;
+    outline: none;
+}
+
+div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: #282c34;
+}
+
+
+@media screen and (min-width:500px) {
+    .card-container {
+        width: 85%;
+        margin: auto;
+    }
+    .nft-card {
+        min-height: 5rem;
+        border: 2px solid #fff;
+        width: 80% !important;
+    }
+    .nft-card h6 {
+        font-size: 0.8rem;
+    }
+    .price-supply {
+        font-size: 0.5rem;
+    }
+    .price {
+        margin-right: 0.5rem;
+        border-radius: 5px;
+        padding: 5px;
+    }
+    
+    .supply {
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    .date {
+        font-size: 0.5rem;
+    }
+    
+    
+    .social-icons {
+        margin-top: -0.3rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .social-icons svg {
+        font-size: 16px;
+        margin-right: 0.5rem;
+    }
+}
+
+
+
+/* Laptop */
+@media screen and (min-width:900px) {
+    .card-container {
+        width: 65%;
+        margin: auto;
+    }
+    .nft-card {
+        min-height: 5rem;
+        border: 2px solid #fff;
+        width: 80% !important;
+    }
+    .nft-card h6 {
+        font-size:1rem;
+    }
+    .price-supply {
+        font-size: 0.5rem;
+    }
+    .price {
+        margin-right: 0.7rem;
+        border-radius: 8px;
+        padding: 8px;
+    }
+    
+    .supply {
+        border-radius: 8px;
+        padding: 8px;
+    }
+
+    .date {
+        font-size: 0.6rem;
+        padding: 0.6rem;
+    }
+    
+    
+    .social-icons {
+        margin-top: -0.3rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .social-icons svg {
+        font-size: 22px;
+        margin-right: 0.5rem;
+    }
+}
