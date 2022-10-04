@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css";
+import './form.css'
 
 export default function Solana() {
 
@@ -36,7 +37,7 @@ export default function Solana() {
         formData.append("description", description)
         formData.append("promote", promote)
         formData.append("date", startDate)
-        formData.append("projectImage", fileName)
+        formData.append("image", fileName)
 
         setName('')
         setPrice('')
@@ -58,109 +59,103 @@ export default function Solana() {
     }
 
     return (
-        <form onSubmit={submitForm} encType="multipart/form-data" autoComplete="off">
-            <div className='form-group'>
-                <label>Project Name</label>
-                <input
-                    type="text"
-                    className="form-control"
-                    name='name'
-                    placeholder='Project name...'
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                />
-            </div>
+        <div className='form-container'>
+            <form onSubmit={submitForm} encType="multipart/form-data" autoComplete="off">
+                <div className='form-input'>
+                    <label>Project Name</label>
+                    <input
+                        type="text"
+                        name='name'
+                        placeholder='Project name...'
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                    />
+                </div>
 
-            <div className='form-group'>
-                <label>Price</label>
-                <input
-                    type="text"
-                    className="form-control"
-                    name='price'
-                    placeholder='Price link...'
-                    value={price}
-                    onChange={(e) => setPrice(e.target.value)}
-                />
-            </div>
-            <div className='form-group'>
-                <label>Supply</label>
-                <input
-                    type="number"
-                    className="form-control"
-                    name='supply'
-                    placeholder='Supply...'
-                    value={supply}
-                    onChange={(e) => setSupply(e.target.value)}
-                />
-            </div>
-            <div className='form-group'>
-                <label>Website Link</label>
-                <input
-                    type="text"
-                    className="form-control"
-                    name='website'
-                    placeholder='Website...'
-                    value={website}
-                    onChange={(e) => setWebsite(e.target.value)}
-                />
-            </div>
+                <div className='form-input'>
+                    <label>Price</label>
+                    <input
+                        type="text"
+                        name='price'
+                        placeholder='Price link...'
+                        value={price}
+                        onChange={(e) => setPrice(e.target.value)}
+                    />
+                </div>
+                <div className='form-input'>
+                    <label>Supply</label>
+                    <input
+                        type="number"
+                        name='supply'
+                        placeholder='Supply...'
+                        value={supply}
+                        onChange={(e) => setSupply(e.target.value)}
+                    />
+                </div>
+                <div className='form-input'>
+                    <label>Website Link</label>
+                    <input
+                        type="text"
+                        name='website'
+                        placeholder='Website...'
+                        value={website}
+                        onChange={(e) => setWebsite(e.target.value)}
+                    />
+                </div>
 
-            <div className='form-group'>
-                <label>Discord</label>
-                <input
-                    type="text"
-                    className="form-control"
-                    name='discord'
-                    placeholder='Discord...'
-                    value={discord}
-                    onChange={(e) => setDiscord(e.target.value)}
-                />
-            </div>
+                <div className='form-input'>
+                    <label>Discord</label>
+                    <input
+                        type="text"
+                        name='discord'
+                        placeholder='Discord...'
+                        value={discord}
+                        onChange={(e) => setDiscord(e.target.value)}
+                    />
+                </div>
 
-            <div className='form-group'>
-                <label>Twitter</label>
-                <input
-                    type="text"
-                    className="form-control"
-                    name='twitter'
-                    placeholder='Twitter...'
-                    value={twitter}
-                    onChange={(e) => setTwitter(e.target.value)}
-                />
-            </div>
+                <div className='form-input'>
+                    <label>Twitter</label>
+                    <input
+                        type="text"
+                        name='twitter'
+                        placeholder='Twitter...'
+                        value={twitter}
+                        onChange={(e) => setTwitter(e.target.value)}
+                    />
+                </div>
 
-            <div className='form-group'>
-                <label>Description</label>
-                <textarea
-                    className="form-control"
-                    name='description'
-                    placeholder='Type...'
-                    value={description}
-                    onChange={(e) => setDescription(e.target.value)}
-                />
-            </div>
+                <div className='form-input'>
+                    <label>Description</label>
+                    <textarea
+                        name='description'
+                        placeholder='Type...'
+                        value={description}
+                        onChange={(e) => setDescription(e.target.value)}
+                    />
+                </div>
 
-            <div className='form-group'>
-                <label>Date</label>
-                <DatePicker
-                    selected={startDate}
-                    onChange={(date) => setStartDate(date)}
-                    timeInputLabel="Time:"
-                    dateFormat="MM/dd/yyyy h:mm aa"
-                    showTimeInput
-                />
-            </div>
+                <div className='form-input'>
+                    <label>Date</label>
+                    <DatePicker
+                        selected={startDate}
+                        onChange={(date) => setStartDate(date)}
+                        timeInputLabel="Time:"
+                        dateFormat="MM/dd/yyyy h:mm aa"
+                        showTimeInput
+                    />
+                </div>
 
-            <div className='form-group'>
-                <label htmlFor='file'>Image</label>
-                <input
-                    type="file"
-                    filename="projectImage"
-                    className="form-control"
-                    onChange={onChangeFile}
-                />
-            </div>
-            <button className="btn btn-primary btn-block">Submit</button>
-        </form>
+                <div className='form-input'>
+                    <label htmlFor='file'>Image</label>
+                    <input
+                        type="file"
+                        filename="image"
+                        onChange={onChangeFile}
+                    />
+                </div>
+                <button className="button">Submit</button>
+            </form>
+        </div>
     )
 }
