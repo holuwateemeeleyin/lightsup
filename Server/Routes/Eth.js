@@ -6,7 +6,7 @@ const upload = require("../utils/multer")
 
 
 // Adding a new NFTProject
-router.post('/add-ethproject', upload.single('ethImage'), async (req, res) =>{
+router.post('/add-ethproject', upload.single('image'), async (req, res) =>{
     try {
         const result = await cloudinary.uploader.upload(req.file.path);
         // res.json(result)
@@ -20,7 +20,7 @@ router.post('/add-ethproject', upload.single('ethImage'), async (req, res) =>{
             discord:req.body.discord,
             twitter:req.body.twitter,
             description:req.body.description,
-            ethImage: result.secure_url,
+            image: result.secure_url,
             cloudinary_id: result.public_id,
             promote:req.body.promote
         });
