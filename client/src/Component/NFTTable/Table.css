@@ -1,0 +1,61 @@
+.table {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: palevioletred;
+    color: white;
+}
+
+.table-icon {
+    display: flex;
+    height: 83px;
+    align-items: center;
+}
+.table-icon svg {
+    margin-right: 0.5rem;
+    color: #fff;
+    font-size: 15px;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px;
+}
+
+
+td {
+    font-size: 0.7rem;
+    vertical-align: middle;
+}
+
+td img {
+    display: block;
+    margin: 0;
+    width: 4rem;
+
+}
+
+tr:hover {
+    transform: scale(1.01);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 900px) {
+    td {
+        font-size: 1.3rem;
+    }
+    td img{
+        width:7rem;
+    }
+    .table-icon {
+        height: 145px;
+    }
+    .table-icon svg {
+        font-size: 1.5rem;
+    }
+}
