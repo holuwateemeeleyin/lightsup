@@ -33,6 +33,7 @@ export default function RoutesPath() {
     axios.get(`/api/get-ethNFTs`)
       .then((res)=> {
         setEth(res.data)
+        console.log(res.data)
       })
       .catch((err)=> console.error(err))
       setLoading(false)
