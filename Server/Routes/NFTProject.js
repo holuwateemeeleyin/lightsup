@@ -6,7 +6,7 @@ const cloudinary = require("../utils/cloudinary")
 const upload = require("../utils/multer")
 
 
-router.post('/add', upload.single("projectImage"), async (req, res)=> {
+router.post('/add', upload.single("image"), async (req, res)=> {
     // console.log(req.file);
     try {
         const result = await cloudinary.uploader.upload(req.file.path);
@@ -20,7 +20,7 @@ router.post('/add', upload.single("projectImage"), async (req, res)=> {
             discord:req.body.discord,
             twitter:req.body.twitter,
             description:req.body.description,
-            projectImage: result.secure_url,
+            image: result.secure_url,
             cloudinary_id: result.public_id,
             promote:req.body.promote
         });
@@ -45,27 +45,27 @@ router.get('/get-nfts', (req,res)=> {
 
 
 //DELETE
-// router.delete('/delete-nft', (req,res)=>{
-//     let id=req.query.id;
-//     NFTProject.findByIdAndRemove(id,(err,doc)=>{
-//         if(err) return res.status(400).send(err);
-//         res.json(true)
-//     })
-// })
-
-router.delete('/delete-nft/:id', async(req,res) => {
-    await NFTProject.findByIdAndDelete(req.params.id)
-    
-    try{
-      res.status(204).json({
-          status : 'Success',
-          data : {}
-      })
-    }catch(err){
-        res.status(500).json({
-            status: 'Failed',
-            message : err
-        })
-    }
+router.delete('/delete-nft', (req,res)=>{
+    let id=req.query.id;
+    NFTProject.findByIdAndRemove(id,(err,doc)=>{
+        if(err) return res.status(400).send(err);
+        res.json(true)
+    })
 })
+
+// router.delete('/delete-nft/:id', async(req,res) => {
+//     await NFTProject.findByIdAndDelete(req.params.id)
+    
+//     try{
+//       res.status(204).json({
+//           status : 'Success',
+//           data : {}
+//       })
+//     }catch(err){
+//         res.status(500).json({
+//             status: 'Failed',
+//             message : err
+//         })
+//     }
+// })
 module.exports = router
